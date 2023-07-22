@@ -1,0 +1,14 @@
+.content{
+   position: absolute;
+  
+}
+img{
+    width: 200px;
+    height: auto;
+}
+.dn_img{
+    width: 40px;
+}
+.dn_p{
+    margin: 0;
+}
