@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 const ErrPage = () => {
   const clickedCity = useSelector((state) => state.counter.cityName)

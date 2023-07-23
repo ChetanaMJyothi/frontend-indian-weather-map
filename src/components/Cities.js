@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
-import { cityStore, stateStore } from '../reduxTool/validSlice.js'
+import { cityStore} from '../reduxTool/validSlice.js'
 import { useEffect, useState } from 'react'
 
 import './Cities.css';

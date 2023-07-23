@@ -23,12 +23,13 @@ const Weather = () => {
         setAPIdata(data);
       } catch (error) {
         console.error('Error fetching weather data:', error);
+        
         navigate("/errpage");
       }
     };
 
     fetchData();
-  }, [clickedCity]);
+  }, [clickedCity, navigate]);
   if (APIdata) {
     return (
       <div>

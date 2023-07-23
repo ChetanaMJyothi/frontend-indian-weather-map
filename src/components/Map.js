@@ -37,11 +37,7 @@ const Map = () => {
 				stateDispatcher(state);
 
 				break;
-			case "st12":
-				state = "Haryana";
-				stateDispatcher(state);
-
-				break;
+			
 			case "st27":
 				state = "Delhi";
 				stateDispatcher(state);
@@ -83,11 +79,7 @@ const Map = () => {
 
 
 				break;
-			case "st32":
-				state = "Jharkhand";
-				stateDispatcher(state);
-
-				break;
+			
 			case "st1":
 				state = "West Bengal";
 				stateDispatcher(state);

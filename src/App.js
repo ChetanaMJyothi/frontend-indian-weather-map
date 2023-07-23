@@ -1,5 +1,5 @@
 import './App.css';
-import React, { Suspense } from 'react';
+import React from 'react';
 import SignUp from './authentication/SignUp.js';
 import Login from './authentication/Login.js';
 import Cities from './components/Cities.js';
