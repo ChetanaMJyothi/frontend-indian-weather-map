@@ -30,6 +30,7 @@ function SignUp() {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorCode, errorMessage);
+                navigate("/errpage");
 
             });
     }

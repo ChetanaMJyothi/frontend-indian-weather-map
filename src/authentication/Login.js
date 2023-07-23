@@ -29,6 +29,7 @@ function Login() {
                 const errorMessage = error.message;
                 console.log(errorCode, errorMessage)
                 setErrMsg(errorMessage);
+                navigate("/errpage");
             });
 
     }
