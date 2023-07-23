@@ -1,0 +1,19 @@
+
+.err_div{
+   margin: 20px;
+   font-weight: bold;
+}
+
+.link_btn{
+transition: all 0.3s ease;
+text-decoration: none;
+border: 2px solid black;
+padding: 5px;
+border-radius:10px;
+background-color: rgb(241, 168, 168);
+color: black;
+}
+.link_btn:hover{
+   background-color: rgb(188, 117, 117);
+   color: white;
+    }

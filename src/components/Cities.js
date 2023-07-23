@@ -1,21 +1,21 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import { cityStore} from '../reduxTool/validSlice.js'
 import { useEffect, useState } from 'react'
-
+import Loader from './Loader.js';
 import './Cities.css';
 const Cities = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
-
+const[isLoader, setIsLoader]= useState(true);
   const clickedState = useSelector((state) => state.counter.stateName);
-  /* const arrayOfCities = statesIndia[clickedState]; */
   console.log(clickedState);
   const [arrayOfCities, setArrayOfCities] = useState([]);
   useEffect(() => {
     const fetchCityNames = async () => {
       try {
+        
         const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/${clickedState}`);
         console.log(response);
         const resData = await response.json();
@@ -23,6 +23,7 @@ const Cities = () => {
           throw new Error(resData.message);
         }
         setArrayOfCities(resData.StateName.cityNames);
+        setIsLoader(false);
       }
       catch (err) {
         console.log(err.message)
@@ -37,7 +38,11 @@ const Cities = () => {
     navigate("/weather");
   }
   return (
-    <div className='city_sec'>
+    <React.Fragment>
+      {isLoader && <Loader/>}
+      {!isLoader &&
+      
+          <div className='city_sec'>
       <h2>{clickedState}</h2>
       <ul className='ul_item'>
         {arrayOfCities.map((item) => {
@@ -46,7 +51,11 @@ const Cities = () => {
           )
         })}
       </ul>
-    </div>
+    </div>}
+    <Link to="/map" className='arrow_btn'><span class="material-symbols-outlined">
+arrow_back
+</span></Link>
+    </React.Fragment>
   )
 }
 

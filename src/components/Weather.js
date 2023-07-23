@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useSelector} from 'react-redux'
 import ClimateSymbol from './ClimateSymbol';
 import hot from '../images/hot.png';
@@ -54,7 +54,11 @@ const Weather = () => {
               </div>
             </div>
           </div>
+          <Link to="/city" className='arrow_btn'><span class="material-symbols-outlined">
+arrow_back
+</span></Link>
         </div>
+
       </div>
 
     )
