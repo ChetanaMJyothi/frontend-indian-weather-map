@@ -16,7 +16,7 @@ const Cities = () => {
   useEffect(() => {
     const fetchCityNames = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/states/${clickedState}`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/${clickedState}`);
         console.log(response);
         const resData = await response.json();
         if (!response.ok) {
