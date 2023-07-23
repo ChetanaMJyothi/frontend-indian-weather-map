@@ -8,12 +8,19 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
+.weather_div{
+    width: 413px;
+    height: 530px;
+    background: linear-gradient(to right, red, purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .weatherCard{
-     padding: 20px;
     width: 400px;
-    border: 2px solid rgb(158, 12, 24);
+ 
 text-align: center;
-border-radius: 10px;
+background: white;
 }
 /* .three_sec{
     margin: auto;
@@ -41,5 +48,5 @@ border-radius: 10px;
     font-weight: bolder;
 }
 .material-symbols-outlined:hover{
-    color: red;
+    color: #EA445A;
 }

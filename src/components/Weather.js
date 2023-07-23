@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, Link } from "react-router-dom";
-import { useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
 import ClimateSymbol from './ClimateSymbol';
 import hot from '../images/hot.png';
 import wind from '../images/windImg.png';
@@ -9,6 +9,7 @@ import './Weather.css';
 const Weather = () => {
   const navigate = useNavigate();
   const clickedCity = useSelector((state) => state.counter.cityName)
+  const clickedState = useSelector((state)=>state.counter.stateName)
   const [APIdata, setAPIdata] = useState("");
   console.log(APIdata)
   useEffect(() => {
@@ -23,7 +24,7 @@ const Weather = () => {
         setAPIdata(data);
       } catch (error) {
         console.error('Error fetching weather data:', error);
-        
+
         navigate("/errpage");
       }
     };
@@ -33,9 +34,11 @@ const Weather = () => {
   if (APIdata) {
     return (
       <div>
-        <h1>{clickedCity}</h1>
+        <h1>State: {clickedState}</h1>
+        <h1>City: {clickedCity}</h1>
+        
         <div className="weatherCls">
-
+        <div className='weather_div'>
           <div className='weatherCard'>
             <ClimateSymbol imageCode={APIdata.weather[0].icon}></ClimateSymbol>
             <p>{APIdata.weather[0].description.toUpperCase()}</p>
@@ -54,11 +57,12 @@ const Weather = () => {
               </div>
             </div>
           </div>
+          </div>
           <Link to="/city" className='arrow_btn'><span class="material-symbols-outlined">
-arrow_back
-</span></Link>
+            arrow_back
+          </span></Link>
         </div>
-
+        
       </div>
 
     )
