@@ -9,7 +9,7 @@ import './Weather.css';
 const Weather = () => {
   const navigate = useNavigate();
   const clickedCity = useSelector((state) => state.counter.cityName)
-  const clickedState = useSelector((state)=>state.counter.stateName)
+  const clickedState = useSelector((state) => state.counter.stateName)
   const [APIdata, setAPIdata] = useState("");
   console.log(APIdata)
   useEffect(() => {
@@ -36,33 +36,33 @@ const Weather = () => {
       <div>
         <h1>State: {clickedState}</h1>
         <h1>City: {clickedCity}</h1>
-        
+
         <div className="weatherCls">
-        <div className='weather_div'>
-          <div className='weatherCard'>
-            <ClimateSymbol imageCode={APIdata.weather[0].icon}></ClimateSymbol>
-            <p>{APIdata.weather[0].description.toUpperCase()}</p>
-            <div className='three_sec'>
-              <div className='eachSec'>
-                <img src={hot} className='logo_cls' alt="temperature symbol" />
-                <p>Temperature: {APIdata.main.temp} &deg;C</p>
-              </div>
-              <div className='eachSec'>
-                <img src={wind} className='logo_cls' alt='wind symbol' />
-                <p>Wind Speed: {APIdata.wind.speed} km/h</p>
-              </div>
-              <div className='eachSec'>
-                <img src={humid} className='logo_cls' alt='humidity symbol' />
-                <p>Humidity: {APIdata.main.humidity}%</p>
+          <div className='weather_div'>
+            <div className='weatherCard'>
+              <ClimateSymbol imageCode={APIdata.weather[0].icon}></ClimateSymbol>
+              <p>{APIdata.weather[0].description.toUpperCase()}</p>
+              <div className='three_sec'>
+                <div className='eachSec'>
+                  <img src={hot} className='logo_cls' alt="temperature symbol" />
+                  <p>Temperature: {APIdata.main.temp} &deg;C</p>
+                </div>
+                <div className='eachSec'>
+                  <img src={wind} className='logo_cls' alt='wind symbol' />
+                  <p>Wind Speed: {APIdata.wind.speed} km/h</p>
+                </div>
+                <div className='eachSec'>
+                  <img src={humid} className='logo_cls' alt='humidity symbol' />
+                  <p>Humidity: {APIdata.main.humidity}%</p>
+                </div>
               </div>
             </div>
-          </div>
           </div>
           <Link to="/city" className='arrow_btn'><span class="material-symbols-outlined">
             arrow_back
           </span></Link>
         </div>
-        
+
       </div>
 
     )

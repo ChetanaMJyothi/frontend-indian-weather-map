@@ -47,9 +47,9 @@ const ClimateSymbol = (props) => {
         <div>
             <div className='content'>
                 {DayOrNight ? <p className='dn_p'>Day</p> : <p className='dn_p'>Night</p>}
-                {DayOrNight ? <img src={day} className='dn_img' alt="abcd" /> : <img src={night} className='dn_img'  alt="abcd" />}
+                {DayOrNight ? <img src={day} className='dn_img' alt="abcd" /> : <img src={night} className='dn_img' alt="abcd" />}
             </div>
-            <img className="climate_image_cls" src={ClimateImage}  alt="abcd"></img>
+            <img className="climate_image_cls" src={ClimateImage} alt="abcd"></img>
         </div>
     )
 }

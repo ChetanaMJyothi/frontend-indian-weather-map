@@ -1,8 +1,8 @@
 import React from 'react'
 import './Loader.css';
-function Loader() {
+function Loader(props) {
   return (
-    <div class="loader_div">
+    <div className={props.className}>
       <span class="loader"></span>
     </div>
   )

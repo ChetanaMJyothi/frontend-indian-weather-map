@@ -37,7 +37,7 @@ const Map = () => {
 				stateDispatcher(state);
 
 				break;
-			
+
 			case "st27":
 				state = "Delhi";
 				stateDispatcher(state);
@@ -79,7 +79,7 @@ const Map = () => {
 
 
 				break;
-			
+
 			case "st1":
 				state = "West Bengal";
 				stateDispatcher(state);

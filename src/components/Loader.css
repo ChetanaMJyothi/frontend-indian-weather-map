@@ -1,25 +1,32 @@
-.loader_div{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.loader_div {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid;
-    border-color: #FF3D00 transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+  width: 48px;
+  height: 48px;
+  border: 5px solid;
+  border-color: #FF3D00 transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.small_spinner {
+  display: inline;
+  height: fit-content;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  @keyframes rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } 
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

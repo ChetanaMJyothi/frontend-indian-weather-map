@@ -1,52 +1,54 @@
-.weatherCls{
+.weatherCls {
     display: flex;
     justify-content: center;
-    align-items:center ;
+    align-items: center;
     font-size: 20px;
     font-weight: 600;
     color: rgb(128, 47, 12);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-.weather_div{
-    width: 413px;
-    height: 530px;
+
+.weather_div {
+    width: 418px;
+    height: 535px;
     background: linear-gradient(to right, red, purple);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.weatherCard{
+
+.weatherCard {
     width: 400px;
- 
-text-align: center;
-background: white;
-}
-/* .three_sec{
-    margin: auto;
+    padding: 5px;
     text-align: center;
-} */
-.eachSec{
-    display: flex;
-    flex-direction: row;
- gap: 10px;
- align-items: center;
- padding: 10px;
+    background: white;
 }
 
-.logo_cls{
-    width:40px;
+.eachSec {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo_cls {
+    width: 40px;
     height: 40px;
 }
-.arrow_btn{
+
+.arrow_btn {
     position: absolute;
-    top:50px;
+    top: 50px;
     left: 100px;
 }
-.material-symbols-outlined{
+
+.material-symbols-outlined {
     font-size: 50px;
     font-weight: bolder;
 }
-.material-symbols-outlined:hover{
+
+.material-symbols-outlined:hover {
     color: #EA445A;
 }
